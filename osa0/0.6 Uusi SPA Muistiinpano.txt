@@ -1,0 +1,8 @@
+title 0.6 Uusi SPA Muistiinpano
+
+note over Selain:Käyttäjä luo uuden muistiinpanon ja painaa "Save"-painiketta
+
+Selain->Palvelin:HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+Palvelin->Selain:Vasataa statuskoodilla "201 Created", ei uudelleenohjausta
+
+note over Selain:Sivuston tiedot päivittyvät ilman että käyttäjän tarvitsee tehdä mitään muuta

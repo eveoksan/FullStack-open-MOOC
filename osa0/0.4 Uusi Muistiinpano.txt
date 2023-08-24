@@ -1,0 +1,19 @@
+title 0.4 Uusi Muistiinpano
+
+note over Selain: Käyttäjä kirjoittaa uuden muistiinpanon ja painaa sen jälkeen "Save"-nappia.
+
+Selain->Palvelin:HTTP POST https://studies.cs.helsinki.fi/exampleapp/notes
+Palvelin->Selain:HTTP status koodi 302
+Selain->Palvelin:HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Palvelin->Selain:HTML-koodi
+Selain->Palvelin:HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Palvelin->Selain:main.css
+Selain->Palvelin:HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Palvelin->Selain:main.js
+
+note over Selain:Selain suorittaa main.js-koodia
+
+Selain->Palvelin:HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Palvelin->Selain:[{"content":"Nice little kitty cat jumped in the air","date":"2022-03-15T10:47:18.575Z" }, ...]
+
+note over Selain:Näyttää käyttäjälle päivitetyn muistiinpanolistan jossa uusin lisäys on mukana

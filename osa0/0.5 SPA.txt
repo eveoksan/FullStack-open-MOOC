@@ -1,0 +1,15 @@
+title 0.5 SPA
+
+Selain->Palvelin:HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+Palvelin->Selain:HTML-koodi
+Selain->Palvelin:HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Palvelin->Selain:main.css
+Selain->Palvelin:HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+Palvelin->Selain:spa.js
+
+note over Selain:Selain suorittaa spa.js-koodia
+
+Selain->Palvelin:HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Palvelin->Selain:[{"content":"Nice little kitty cat jumped in the air","date":"2022-03-15T10:47:18.575Z" }, ...]
+
+note over Selain:Selain näyttää spa sivun
